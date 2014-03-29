@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Partial MNGR</title>
 	<link rel="stylesheet" href="../css/main.css?v=1">
 	<link rel="stylesheet" type="text/css" href="../css/app.css">
 </head>
@@ -127,27 +127,39 @@
 </div>
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="nb-4">
-<div class="layouts">
+<div class="root">
 <h1>Scss root manager</h1>
 <div class="mod-create">
 <h2>Create Module</h2>
-<form class="form-box" action="../partial-genr8r/create.php" method="post">
-	<input type="text" name="partialName" />
+<form class="form-box" action="create-root.php" method="post">
+	<input type="text" name="rootName" />
 	<input type="Submit" name="Submit" value="Create">
 </form>
 </div>
 <div class="mod-delete">
 <h2>Delete Module</h2>
-<form class="form-box" action="../partial-genr8r/delete.php" method="post">
-	<input type="text" name="partialName" />
+<form class="form-box" action="delete-root.php" method="post">
+	<input type="text" name="rootName" />
 	<input type="Submit" name="Submit" value="Delete">
 </form>
 </div>
 <div class="mod-list">
 <h2>Modules List</h2>
  <?php
-    $orig = "../scss/modules";
+    $orig = "../scss";
     if ($dir = opendir($orig)) {
 
 
@@ -161,7 +173,7 @@
         $ok = "false";
         }
         if ($ok == "true"){
-          echo "<a href= '/scss/modules/$file'>$filename</a>";
+          echo "<a href= '/scss/$file'>$filename</a>";
         echo "<br>";
         }
         }

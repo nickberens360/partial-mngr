@@ -2,13 +2,13 @@
 
 
 //Get file name from user input
-$myFile = $_POST["partialName"];
+$myFile = $_POST["rootName"];
 //Create @import string
 $myImport ="@import " . '"' . $myFile . '";' ;
 //Create file name string
 $myFile = "_" . $myFile . ".scss";
 //Create file path string
-$filePath = "../scss/modules/_modules.scss";
+$filePath = "../scss/main.scss";
 //Place contents of file into variable
 $contents = file_get_contents($filePath);
 //Remove desired @import string
@@ -19,7 +19,7 @@ $contents = file_put_contents($filePath, $contents);
 
 
 
-$dir = "../scss/modules/";
+$dir = "../scss/";
 
 unlink($dir.$myFile);
 
