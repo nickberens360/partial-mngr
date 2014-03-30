@@ -4,34 +4,45 @@
 	<meta charset="UTF-8">
 	<title>Partial MNGR</title>
 	<link rel="stylesheet" href="../css/main.css?v=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/superhero/bootstrap.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+
 	<link rel="stylesheet" type="text/css" href="../css/app.css">
 </head>
 <body>
 
+<div class="grid-row container">
 
+<h1>Sass Partial MNGR</h1>
 
-
-
-<div class="grid-row">
 <div class="nb-4">
-<div class="modules">
-<h1>Scss modules manager</h1>
+<div class="modules well">
+<h1>Modules manager</h1>
 <div class="mod-create">
-<h2>Create Module</h2>
-<form class="form-box" action="create-mod.php" method="post">
-	<input type="text" name="modName" />
-	<input type="Submit" name="Submit" value="Create">
+<h3>Create Module</h3>
+<form class="form-box form-inline " action="create-mod.php" method="post">
+    <input type="text" class="form-control" id="inputDefault" name="modName">
+    <button type="Submit" class="btn btn-primary">Create</button>
 </form>
 </div>
 <div class="mod-delete">
-<h2>Delete Module</h2>
-<form class="form-box" action="delete-mod.php" method="post">
-	<input type="text" name="partialName" />
-	<input type="Submit" name="Submit" value="Delete">
+<h3>Delete Module</h3>
+<form class="form-box form-inline" action="delete-mod.php" method="post">
+    <input type="text" class="form-control" id="inputDefault" name="partialName">
+    <button type="Submit" class="btn btn-danger">Delete</button>
 </form>
 </div>
 <div class="mod-list">
-<h2>Modules List</h2>
+<br/>
+<h4>Modules List</h4>
  <?php
     $orig = "../scss/modules";
     if ($dir = opendir($orig)) {
@@ -47,7 +58,7 @@
         $ok = "false";
         }
         if ($ok == "true"){
-          echo "<a href= '/scss/modules/$file'>$filename</a>";
+          echo "<span>$filename</span>";
         echo "<br>";
         }
         }
@@ -61,45 +72,28 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <div class="nb-4">
-<div class="layouts">
-<h1>Scss layouts manager</h1>
+<div class="modules well">
+<h1>Layouts manager</h1>
 <div class="mod-create">
-<h2>Create Module</h2>
-<form class="form-box" action="create-layout.php" method="post">
-	<input type="text" name="layoutName" />
-	<input type="Submit" name="Submit" value="Create">
+<h3>Create Layout</h3>
+<form class="form-box form-inline " action="create-layout.php" method="post">
+    <input type="text" class="form-control" id="inputDefault" name="layoutName">
+    <button type="Submit" class="btn btn-primary">Create</button>
 </form>
 </div>
 <div class="mod-delete">
-<h2>Delete Module</h2>
-<form class="form-box" action="delete-layout.php" method="post">
-	<input type="text" name="layoutName" />
-	<input type="Submit" name="Submit" value="Delete">
+<h3>Delete Layout</h3>
+<form class="form-box form-inline" action="delete-layout.php" method="post">
+    <!-- <input type="text" name="partialName" />
+    <input type="Submit" name="Submit" value="Delete"> -->
+    <input type="text" class="form-control" id="inputDefault" name="layoutName">
+    <button type="Submit" class="btn btn-danger">Delete</button>
 </form>
 </div>
 <div class="mod-list">
-<h2>Modules List</h2>
+<br/>
+<h4>Layouts List</h4>
  <?php
     $orig = "../scss/layouts";
     if ($dir = opendir($orig)) {
@@ -133,31 +127,26 @@
 
 
 
-
-
-
-
-
-
 <div class="nb-4">
-<div class="root">
-<h1>Scss root manager</h1>
+<div class="modules well">
+<h1>Root manager</h1>
 <div class="mod-create">
-<h2>Create Module</h2>
-<form class="form-box" action="create-root.php" method="post">
-	<input type="text" name="rootName" />
-	<input type="Submit" name="Submit" value="Create">
+<h3>Create Root</h3>
+<form class="form-box form-inline " action="create-root.php" method="post">
+    <input type="text" class="form-control" id="inputDefault" name="rootName">
+    <button type="Submit" class="btn btn-primary">Create</button>
 </form>
 </div>
 <div class="mod-delete">
-<h2>Delete Module</h2>
-<form class="form-box" action="delete-root.php" method="post">
-	<input type="text" name="rootName" />
-	<input type="Submit" name="Submit" value="Delete">
+<h3>Delete Root</h3>
+<form class="form-box form-inline" action="delete-root.php" method="post">
+    <input type="text" class="form-control" id="inputDefault" name="rootName">
+    <button type="Submit" class="btn btn-danger">Delete</button>
 </form>
 </div>
 <div class="mod-list">
-<h2>Modules List</h2>
+<br/>
+<h4>Root List</h4>
  <?php
     $orig = "../scss";
     if ($dir = opendir($orig)) {
@@ -184,6 +173,9 @@
 </div>
 </div>
 </div>
+
+
+
 
 
 

@@ -1,16 +1,7 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
+/*html, body, .grid-row, .nb-4, .well{
+    height: 100%;
+}*/
 
 
 
@@ -24,12 +15,10 @@
 	-webkit-box-sizing: border-box; 
 	box-sizing: border-box;
 	margin-bottom:0;
-	border:1px solid white;
-	background:#D1D1D1;
-  text-align:center;
+	padding-right:20px;
 }
 [class*='nb-']:last-of-type {
-	margin-right:0;
+	padding-right:0;
 }
 .nb-1{
 	width: 08.333333333%;

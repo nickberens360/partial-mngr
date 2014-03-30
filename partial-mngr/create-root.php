@@ -11,7 +11,8 @@
 	$fh = fopen($myFile, 'a') or die("can't open file");
 	$stringData = "$importName\n";
 	fwrite($fh, $stringData);
-	fclose($fh);  
+	fclose($fh); 
+	file_put_contents($myFile, implode(PHP_EOL, file($myFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES))); 
 
 	header("location:index.php");
 	
