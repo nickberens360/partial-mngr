@@ -15,7 +15,7 @@
 
 
 
-	<link rel="stylesheet" type="text/css" href="../css/app.css">
+	<link rel="stylesheet" type="text/css" href="app.css">
 </head>
 <body>
 
@@ -25,7 +25,7 @@
 
 <div class="nb-4">
 <div class="modules well">
-<h1>Modules manager</h1>
+<h1>Modules</h1>
 <div class="mod-create">
 <h3>Create Module</h3>
 <form class="form-box form-inline " action="create-mod.php" method="post">
@@ -58,7 +58,7 @@
         $ok = "false";
         }
         if ($ok == "true"){
-          echo "<span>$filename</span>";
+          echo "<a href= '/scss/modules/$file'>$filename</a>";
         echo "<br>";
         }
         }
@@ -74,7 +74,7 @@
 
 <div class="nb-4">
 <div class="modules well">
-<h1>Layouts manager</h1>
+<h1>Layouts</h1>
 <div class="mod-create">
 <h3>Create Layout</h3>
 <form class="form-box form-inline " action="create-layout.php" method="post">
@@ -129,7 +129,7 @@
 
 <div class="nb-4">
 <div class="modules well">
-<h1>Root manager</h1>
+<h1>Root</h1>
 <div class="mod-create">
 <h3>Create Root</h3>
 <form class="form-box form-inline " action="create-root.php" method="post">
