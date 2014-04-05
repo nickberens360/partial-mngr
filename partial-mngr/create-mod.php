@@ -1,13 +1,20 @@
+<?php include 'config.php'; ?>
 <?php
+
     //CREATES THE MODULE PARTIAL FILE
 	$fileName = $_POST["modName"];
-	$ourFileName = "../scss/modules/_$fileName.scss";
+	$dirPath = "../$root/$partialDirOne";
+		
+	$ourFileName = "$dirPath/_$fileName.scss";
 	$ourFileHandle = fopen($ourFileName, 'w') or die("can't open file");
+	
+	fwrite($ourFileHandle, ".".$fileName."{\n\n}");
+	
 	fclose($ourFileHandle);
 	$importName = "@import " . '"' . $fileName . '";' ;
 	
 	//WRITES TO THE MODULES SCSS FILE
-	$myFile = "../scss/modules/_modules.scss";
+	$myFile = "$dirPath/_$partialDirOne.scss";
 
 
 
