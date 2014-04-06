@@ -29,11 +29,14 @@
 <h1>Modules</h1>
 <div class="mod-create">
 <h3>Create Module</h3>
+
 <form class="form-box form-inline " action="create-mod.php" method="post">
     <input type="text" class="form-control" id="inputDefault" name="modName">
     <button type="Submit" class="btn btn-primary">Create</button>
-    <input type="hidden" name="partial" value="<?php echo $partialDirOne;?>"/>
+    <input type="hidden" name="partialDir" value="<?php echo $partialDirOne;?>"/>
+		<input type="hidden" name="path" value="<?php echo $partDirOnePath;?>"/>
 </form>
+
 </div>
 <div class="mod-delete">
 <h3>Delete Module</h3>
@@ -79,11 +82,16 @@
 <h1>Layouts</h1>
 <div class="mod-create">
 <h3>Create Layout</h3>
+
+
 <form class="form-box form-inline " action="create-mod.php" method="post">
     <input type="text" class="form-control" id="inputDefault" name="modName">
-    <input type="hidden" name="partial" value="<?php echo $partialDirTwo;?>"/>
+    <input type="hidden" name="partialDir" value="<?php echo $partialDirTwo;?>"/>
+		<input type="hidden" name="path" value="<?php echo $partDirTwoPath;?>"/>
     <button type="Submit" class="btn btn-primary">Create</button>
 </form>
+
+
 </div>
 <div class="mod-delete">
 <h3>Delete Layout</h3>
@@ -138,7 +146,7 @@
 <form class="form-box form-inline " action="create-root.php" method="post">
     <input type="text" class="form-control" id="inputDefault" name="rootName">
     <button type="Submit" class="btn btn-primary">Create</button>
-</form>
+</form
 </div>
 <div class="mod-delete">
 <h3>Delete Root</h3>

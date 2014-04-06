@@ -1,12 +1,13 @@
 <?php include 'config.php'; ?>
 <?php
 
-    //CREATES THE MODULE PARTIAL FILE
-	$fileName = $_POST["modName"];
-	$patialType = $_POST["partial"];
-	$dirPath = "../$root/$patialType";
+  //CREATES THE MODULE PARTIAL FILE
+
+	$fileName = $_POST["modName"]; //file name
+	$partialDir = $_POST["partialDir"]; //directory name
+	$path = $_POST["path"]; //directory path
 		
-	$ourFileName = "$dirPath/_$fileName.scss";
+	$ourFileName = "$path/_$fileName.scss";
 	$ourFileHandle = fopen($ourFileName, 'w') or die("can't open file");
 	
 	fwrite($ourFileHandle, ".".$fileName."{\n\n}");
@@ -14,16 +15,17 @@
 	fclose($ourFileHandle);
 	$importName = "@import " . '"' . $fileName . '";' ;
 	
+	
+	
+	
 	//WRITES TO THE MODULES SCSS FILE
-	$myFile = "$dirPath/_$patialType.scss";
+	$myFile = "$path/_$partialDir.scss";
 
 
 	$fh = fopen($myFile, 'a') or die("can't open file");
 
 
 	$stringData = "\n$importName\n";
-
- 
 
 	fwrite($fh, $stringData);
 
@@ -35,11 +37,4 @@
 
 
 	header("location:index.php");
-	
 ?>	
-
-
-
-
-
-
