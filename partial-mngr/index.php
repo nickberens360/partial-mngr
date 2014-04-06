@@ -1,3 +1,4 @@
+<?php include 'config.php'; ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -31,6 +32,7 @@
 <form class="form-box form-inline " action="create-mod.php" method="post">
     <input type="text" class="form-control" id="inputDefault" name="modName">
     <button type="Submit" class="btn btn-primary">Create</button>
+    <input type="hidden" name="partial" value="<?php echo $partialDirOne;?>"/>
 </form>
 </div>
 <div class="mod-delete">
@@ -77,8 +79,9 @@
 <h1>Layouts</h1>
 <div class="mod-create">
 <h3>Create Layout</h3>
-<form class="form-box form-inline " action="create-layout.php" method="post">
-    <input type="text" class="form-control" id="inputDefault" name="layoutName">
+<form class="form-box form-inline " action="create-mod.php" method="post">
+    <input type="text" class="form-control" id="inputDefault" name="modName">
+    <input type="hidden" name="partial" value="<?php echo $partialDirTwo;?>"/>
     <button type="Submit" class="btn btn-primary">Create</button>
 </form>
 </div>

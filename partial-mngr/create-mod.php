@@ -3,7 +3,8 @@
 
     //CREATES THE MODULE PARTIAL FILE
 	$fileName = $_POST["modName"];
-	$dirPath = "../$root/$partialDirOne";
+	$patialType = $_POST["partial"];
+	$dirPath = "../$root/$patialType";
 		
 	$ourFileName = "$dirPath/_$fileName.scss";
 	$ourFileHandle = fopen($ourFileName, 'w') or die("can't open file");
@@ -14,14 +15,10 @@
 	$importName = "@import " . '"' . $fileName . '";' ;
 	
 	//WRITES TO THE MODULES SCSS FILE
-	$myFile = "$dirPath/_$partialDirOne.scss";
-
-
+	$myFile = "$dirPath/_$patialType.scss";
 
 
 	$fh = fopen($myFile, 'a') or die("can't open file");
-
-    
 
 
 	$stringData = "\n$importName\n";
