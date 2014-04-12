@@ -6,7 +6,9 @@
 
 
 
-
+.well{
+	background: #4e5d6c;
+}
 
 [class*='nb-'] {
 	position:relative;
