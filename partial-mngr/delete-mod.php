@@ -1,5 +1,5 @@
+<?php include 'config.php'; ?>
 <?php
-
 
 //Get file name from user input
 $myFile = $_POST["partialName"];
@@ -25,10 +25,5 @@ unlink($dir.$myFile);
 
 
 header("location:index.php");
-
-
-
-
-
 
 ?>

@@ -49,7 +49,7 @@
 <br/>
 <h4>Modules List</h4>
  <?php
-    $orig = "../scss/modules";
+    $orig = $partDirOnePath;
     if ($dir = opendir($orig)) {
 
 
@@ -63,7 +63,7 @@
         $ok = "false";
         }
         if ($ok == "true"){
-          echo "<a href= '/scss/modules/$file'>$filename</a>";
+          echo "<a href= '/$root/$partialDirOne/$file'>$filename</a>";
         echo "<br>";
         }
         }
@@ -106,7 +106,7 @@
 <br/>
 <h4>Layouts List</h4>
  <?php
-    $orig = "../scss/layouts";
+    $orig = $partDirTwoPath;
     if ($dir = opendir($orig)) {
 
 
@@ -120,7 +120,7 @@
         $ok = "false";
         }
         if ($ok == "true"){
-          echo "<a href= '/scss/layouts/$file'>$filename</a>";
+          echo "<a href= '/$root/$partialDirTwo/$file'>$filename</a>";
         echo "<br>";
         }
         }
@@ -147,7 +147,7 @@
     <input type="text" class="form-control" id="inputDefault" name="rootName">
     <button type="Submit" class="btn btn-primary">Create</button>
 </form
-</div>
+></div>
 <div class="mod-delete">
 <h3>Delete Root</h3>
 <form class="form-box form-inline" action="delete-root.php" method="post">
